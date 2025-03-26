@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="300px" height="190px" viewBox="0 0 300 190" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <rect x="10" y="10" width="280" height="170" rx="10" fill="#1e40af"/>
+    <rect x="30" y="100" width="60" height="40" rx="4" fill="white" opacity="0.8"/>
+    <text x="30" y="50" fill="white" font-family="Arial" font-size="20">Physical Card</text>
+</svg>

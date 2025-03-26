@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="120" height="32" viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg">
+    <g fill="#E41E31">
+        <path d="M20 0C8.954 0 0 8.954 0 20s8.954 20 20 20 20-8.954 20-20S31.046 0 20 0zm0 36c-8.837 0-16-7.163-16-16S11.163 4 20 4s16 7.163 16 16-7.163 16-16 16z"/>
+        <path d="M40 12h80v8H40z"/>
+    </g>
+    <text x="45" y="24" font-family="Poppins" font-size="20" font-weight="600" fill="#000">RedotPay</text>
+</svg>

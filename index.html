@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get your RedotPay Virtual Crypto Card - Instant transactions, widely accepted, and compatible with Apple Pay/Google Pay. Convert and spend your crypto anywhere.">
+    <meta name="keywords" content="RedotPay, crypto card, virtual card, cryptocurrency, bitcoin, ethereum, USDT, digital payments, crypto payments">
+    <meta property="og:title" content="RedotPay - Virtual Crypto Card">
+    <meta property="og:description" content="Convert and spend your crypto anywhere with RedotPay virtual card. Instant transactions, widely accepted.">
+    <meta property="og:image" content="assets/card-2.svg">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>RedotPay - Virtual Crypto Card | Spend Crypto Anywhere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <header class="header">
+            <nav class="nav-container">
+                <img src="assets/logo-full-light (1).svg" alt="RedotPay" class="logo">
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#cards">Cards</a>
+                    <a href="#about">About</a>
+                    <a href="#contact" class="contact-btn">Contact Us</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            <div class="content">
+                <div class="text-content" data-aos="fade-right">
+                    <h1>VIRTUAL<br>CRYPTO CARD</h1>
+                    <h2>ANYTIME, ANYWHERE</h2>
+                    <ul class="features">
+                        <li>Instant transaction</li>
+                        <li>Widely-accepted</li>
+                        <li>Compatible with Apple Pay/Google Pay</li>
+                    </ul>
+                    <div class="cta-section">
+                        <a href="https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=bjauqi&utm_source=union&utm_uid=10504&utm_s=5c4527aa9087bec472f2ababf20dbba8c01a33e1" class="cta-button">
+                            <span>Get your card</span>
+                            <div class="button-glow"></div>
+                        </a>
+                        <div class="payment-methods">
+                            <img src="assets/google-pay.svg" alt="Google Pay" class="payment-icon">
+                            <img src="assets/apple-pay.svg" alt="Apple Pay" class="payment-icon">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-display" data-aos="fade-left">
+                    <div class="crypto-icons">
+                        <img src="assets/bitcoin.svg" alt="Bitcoin" class="crypto-icon">
+                        <img src="assets/ethereum.svg" alt="Ethereum" class="crypto-icon">
+                        <img src="assets/usdt.svg" alt="USDT" class="crypto-icon">
+                    </div>
+                    <div class="cards-container">
+                        <img src="assets/card-2.svg" alt="Virtual Card" class="card-image active" id="virtualCard">
+                        <img src="assets/card-3.svg" alt="Physical Card" class="card-image" id="physicalCard">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab active" data-card="virtualCard">VIRTUAL CARD</button>
+                <button class="tab" data-card="physicalCard">PHYSICAL CARD</button>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Cards</h3>
+                    <ul>
+                        <li><a href="#">Virtual Card</a></li>
+                        <li><a href="#">Physical Card</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="#">redotpay</a></li>
+                        <li><a href="#">redotpay physical card promo code</a></li>
+                        <li><a href="#">redotpay card promo code</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">
+                            <img src="assets/bitcoin.svg" alt="Bitcoin">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/ethereum.svg" alt="Ethereum">
+                        </a>
+                        <a href="#" class="social-icon">
+                            <img src="assets/usdt.svg" alt="USDT">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Card switching animation
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Update tabs
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                // Update cards
+                const cardId = tab.getAttribute('data-card');
+                document.querySelectorAll('.card-image').forEach(card => {
+                    card.classList.remove('active');
+                    if (card.id === cardId) {
+                        card.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

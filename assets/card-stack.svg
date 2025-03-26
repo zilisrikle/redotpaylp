@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="250" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+    <!-- Pink Card -->
+    <rect x="60" y="150" width="320" height="200" rx="10" fill="#FF3366" transform="rotate(-10 60 150)"/>
+    <!-- Purple Card -->
+    <rect x="40" y="100" width="320" height="200" rx="10" fill="#6B46C1" transform="rotate(-5 40 100)"/>
+    <!-- Black Card -->
+    <rect x="20" y="50" width="320" height="200" rx="10" fill="#000000"/>
+    <!-- Card Chip -->
+    <rect x="50" y="100" width="50" height="40" rx="5" fill="#C4B5FD"/>
+    <!-- Contactless Symbol -->
+    <path d="M120 90 Q140 70 160 90 M130 90 Q145 75 160 90 M140 90 Q150 80 160 90" stroke="#C4B5FD" fill="none" stroke-width="2"/>
+</svg>
