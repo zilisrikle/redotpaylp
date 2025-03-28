@@ -6,13 +6,18 @@
     <meta name="description" content="Explore the best crypto credit cards of 2025! Compare rewards, fees, security features, and user experience to find your perfect crypto payment solution. Expert analysis and real user reviews.">
     <meta name="keywords" content="best crypto credit cards 2025, crypto card comparison, crypto card rewards, crypto card security, cryptocurrency credit cards, crypto payment solutions">
     <title>Best Crypto Credit Cards 2025 | Compare Rewards, Fees & Security</title>
-    <!-- Google Analytics 代码 -->
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-48350885"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
+        
+        // 配置 Google Analytics
         gtag('config', 'G-48350885');
+        
+        // 配置 Google Ads
+        gtag('config', 'AW-11452126254');  // 替换为你的 Google Ads ID
 
         // 在页面加载完成后添加事件监听
         document.addEventListener('DOMContentLoaded', function() {
@@ -40,7 +45,16 @@
                         'button_location': buttonLocation,
                         'scroll_depth': Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100),
                         'page_title': 'Top 5 Crypto Credit Cards 2025',
-                        'timestamp': new Date().toISOString()
+                        'timestamp': new Date().toISOString(),
+                        'send_to': ['G-48350885', 'AW-11452126254/affiliate_click']  // 同时发送到 GA4 和 Google Ads
+                    });
+
+                    // 发送转化事件到 Google Ads
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-11452126254/affiliate_click',
+                        'value': 1.0,
+                        'currency': 'USD',
+                        'transaction_id': new Date().getTime()  // 使用时间戳作为唯一标识
                     });
                 });
             });
