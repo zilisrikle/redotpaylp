@@ -17,7 +17,7 @@
         gtag('config', 'G-48350885');
         
         // 配置 Google Ads
-        gtag('config', 'AW-11452126254');  // 替换为你的 Google Ads ID
+        gtag('config', 'AW-11452126254');
 
         // 在页面加载完成后添加事件监听
         document.addEventListener('DOMContentLoaded', function() {
@@ -37,7 +37,7 @@
                     const buttonType = this.textContent.trim().toLowerCase();
                     
                     // 发送事件到 Google Analytics
-                    gtag('event', 'affiliate_link_click', {
+                    gtag('event', 'button_click', {
                         'event_category': 'Affiliate',
                         'event_label': 'RedotPay Card',
                         'card_name': 'RedotPay Card',
@@ -45,16 +45,12 @@
                         'button_location': buttonLocation,
                         'scroll_depth': Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100),
                         'page_title': 'Top 5 Crypto Credit Cards 2025',
-                        'timestamp': new Date().toISOString(),
-                        'send_to': ['G-48350885', 'AW-11452126254/affiliate_click']  // 同时发送到 GA4 和 Google Ads
+                        'timestamp': new Date().toISOString()
                     });
 
                     // 发送转化事件到 Google Ads
                     gtag('event', 'conversion', {
-                        'send_to': 'AW-11452126254/affiliate_click',
-                        'value': 1.0,
-                        'currency': 'USD',
-                        'transaction_id': new Date().getTime()  // 使用时间戳作为唯一标识
+                        'send_to': 'AW-11452126254/first_visit'  // 使用默认的 first_visit 事件
                     });
                 });
             });
@@ -531,6 +527,7 @@
             margin-bottom: 0.5rem;
             background: var(--apple-gradient);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         
