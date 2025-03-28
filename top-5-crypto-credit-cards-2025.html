@@ -696,21 +696,39 @@
     </style>
     <!-- 添加 Google Analytics 事件追踪代码 -->
     <script>
-        // Helper function to delay opening a URL until a gtag event is sent.
+        // Enhanced event tracking function
         function gtagSendEvent(url, cardName, buttonType) {
             var callback = function () {
                 if (typeof url === 'string') {
                     window.location = url;
                 }
             };
-            gtag('event', 'affiliate_click', {
+            
+            // 获取用户的滚动深度百分比
+            var scrollDepth = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
+            
+            gtag('event', 'affiliate_link_click', {
                 'event_callback': callback,
                 'event_timeout': 2000,
+                'event_category': 'Affiliate',
+                'event_label': cardName,
                 'card_name': cardName,
                 'button_type': buttonType,
-                'page_title': 'Top 5 Crypto Credit Cards 2025'
+                'button_location': getButtonLocation(),
+                'scroll_depth': scrollDepth,
+                'page_title': 'Top 5 Crypto Credit Cards 2025',
+                'timestamp': new Date().toISOString()
             });
             return false;
+        }
+
+        // 获取按钮在页面上的位置
+        function getButtonLocation() {
+            if (document.querySelector('.floating-cta:hover')) return 'floating_button';
+            if (document.querySelector('.hero-section:hover')) return 'hero_section';
+            if (document.querySelector('.comparison-table:hover')) return 'comparison_table';
+            if (document.querySelector('.conclusion:hover')) return 'conclusion';
+            return 'content_body';
         }
     </script>
 </head>
