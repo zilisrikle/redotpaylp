@@ -6,6 +6,14 @@
     <meta name="description" content="Explore the best crypto credit cards of 2025! Compare rewards, fees, security features, and user experience to find your perfect crypto payment solution. Expert analysis and real user reviews.">
     <meta name="keywords" content="best crypto credit cards 2025, crypto card comparison, crypto card rewards, crypto card security, cryptocurrency credit cards, crypto payment solutions">
     <title>Best Crypto Credit Cards 2025 | Compare Rewards, Fees & Security</title>
+    <!-- Google Analytics 代码 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-48350885"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-48350885');
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -696,35 +704,11 @@
     </style>
     <!-- 添加 Google Analytics 事件追踪代码 -->
     <script>
-        // Enhanced event tracking function
-        function gtagSendEvent(url, cardName, buttonType) {
-            // 直接跳转到目标链接，不等待事件回调
-            if (typeof url === 'string') {
-                // 发送事件
-                gtag('event', 'affiliate_link_click', {
-                    'event_category': 'Affiliate',
-                    'event_label': cardName,
-                    'card_name': cardName,
-                    'button_type': buttonType,
-                    'button_location': getButtonLocation(),
-                    'scroll_depth': Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100),
-                    'page_title': 'Top 5 Crypto Credit Cards 2025',
-                    'timestamp': new Date().toISOString()
-                });
-                
-                // 直接跳转
-                window.location.href = url;
-            }
+        // 简化的链接处理函数
+        function handleAffiliateClick(url) {
+            // 直接跳转
+            window.location.href = url;
             return false;
-        }
-
-        // 获取按钮在页面上的位置
-        function getButtonLocation() {
-            if (document.querySelector('.floating-cta:hover')) return 'floating_button';
-            if (document.querySelector('.hero-section:hover')) return 'hero_section';
-            if (document.querySelector('.comparison-table:hover')) return 'comparison_table';
-            if (document.querySelector('.conclusion:hover')) return 'conclusion';
-            return 'content_body';
         }
     </script>
 </head>
@@ -777,7 +761,7 @@
                             </div>
                         </div>
                     </div>
-                    <a href="#" onclick="return gtagSendEvent('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b', 'RedotPay Card', 'apply_now')" class="cta-button highlight-pulse">Apply Now</a>
+                    <a href="javascript:void(0)" onclick="handleAffiliateClick('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b')" class="cta-button highlight-pulse">Apply Now</a>
                 </div>
             </div>
             
@@ -836,7 +820,7 @@
                 <!-- Apply Button After Review -->
                 <div class="apply-section">
                     <p><strong>💡 Pro Tip:</strong> Apply now to lock in current reward rates!</p>
-                    <a href="#" onclick="return gtagSendEvent('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b', 'RedotPay Card', 'apply_now')" class="cta-button">Get Your RedotPay Card</a>
+                    <a href="javascript:void(0)" onclick="handleAffiliateClick('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b')" class="cta-button">Get Your RedotPay Card</a>
                 </div>
             </div>
 
@@ -918,7 +902,7 @@
                             <td>2%</td>
                             <td>0%</td>
                             <td>$20,000/month</td>
-                            <td><a href="#" onclick="return gtagSendEvent('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b', 'RedotPay Card', 'apply_now')" class="table-cta">Apply Now</a></td>
+                            <td><a href="javascript:void(0)" onclick="handleAffiliateClick('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b')" class="table-cta">Apply Now</a></td>
                         </tr>
                         <tr>
                             <td>Crypto.com</td>
@@ -988,7 +972,7 @@
                 <h3>🚀 Ready to Start Your Crypto Card Journey?</h3>
                 <p>Join thousands of satisfied users who have already made the switch to RedotPay. Get started with zero annual fees and instant virtual card issuance today!</p>
                 <div class="cta-group">
-                    <a href="#" onclick="return gtagSendEvent('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b', 'RedotPay Card', 'apply_now')" class="cta-button">Apply Now</a>
+                    <a href="javascript:void(0)" onclick="handleAffiliateClick('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b')" class="cta-button">Apply Now</a>
                     <a href="card.html" class="cta-button secondary">Learn More</a>
                 </div>
             </div>
@@ -996,7 +980,7 @@
             <!-- Floating Apply Button -->
             <div class="floating-cta">
                 <p>Limited Time Offer: Get Your RedotPay Card</p>
-                <a href="#" onclick="return gtagSendEvent('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b', 'RedotPay Card', 'apply_now')" class="cta-button">Quick Apply</a>
+                <a href="javascript:void(0)" onclick="handleAffiliateClick('https://wap.redotpay.com/en/invite/affiliates-3/?utm_id=est5nj&utm_source=union&utm_uid=10504&utm_s=92e0bbfd00d43ae84b2650dac2aa0604c400987b')" class="cta-button">Quick Apply</a>
             </div>
         </div>
     </div>
