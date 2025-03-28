@@ -365,21 +365,80 @@
         
         /* 响应式优化 */
         @media (max-width: 768px) {
-            .floating-cta {
-                bottom: 20px;
-                right: 20px;
-                left: 20px;
-                padding: 15px 20px;
-                text-align: center;
+            .blog-container {
+                padding: 24px 16px 5rem;  /* 增加底部padding，避免按钮遮挡 */
             }
             
-            .redotpay-highlight {
-                padding: 1.5rem;
-                margin: 1.5rem 0;
+            .blog-header h1 {
+                font-size: 2rem;
+                margin-bottom: 12px;
             }
             
-            .redotpay-highlight h3 {
-                font-size: 1.5rem;
+            .blog-content h2 {
+                font-size: 1.6rem;
+                margin: 36px 0 20px;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.3rem;
+                margin: 28px 0 16px;
+            }
+            
+            .blog-content {
+                font-size: 1rem;
+            }
+            
+            .pros-cons {
+                flex-direction: column;
+                gap: 16px;
+            }
+            
+            .comparison-table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                margin: 24px -16px;
+                width: calc(100% + 32px);
+                border-radius: 0;
+            }
+            
+            .comparison-table table {
+                width: 100%;
+                min-width: 600px; /* 确保表格内容完整显示 */
+            }
+            
+            .card-highlight {
+                margin: 24px -16px;
+                border-radius: 0;
+            }
+            
+            .faq-section {
+                margin: 36px -16px;
+                padding: 24px 16px;
+                border-radius: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .blog-content h2 {
+                font-size: 1.4rem;
+            }
+            
+            .blog-content h3 {
+                font-size: 1.2rem;
+            }
+            
+            .blog-content {
+                font-size: 0.95rem;
+            }
+            
+            .comparison-table th,
+            .comparison-table td {
+                padding: 12px;
             }
         }
         
