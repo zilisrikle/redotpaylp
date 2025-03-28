@@ -25,17 +25,35 @@
     <meta name="keywords" content="best crypto credit cards 2025, crypto card comparison, crypto card rewards, crypto card security, cryptocurrency credit cards, crypto payment solutions">
     <title>Best Crypto Credit Cards 2025 | Compare Rewards, Fees & Security</title>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-48350885"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11504440202"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         
+        // 配置 Google Ads
+        gtag('config', 'AW-11504440202');
+        
         // 配置 Google Analytics
         gtag('config', 'G-48350885');
-        
-        // 配置 Google Ads
-        gtag('config', 'AW-11452126254');
+
+        // Helper function to delay opening a URL until a gtag event is sent
+        function gtagSendEvent(url) {
+            var callback = function () {
+                if (typeof url === 'string') {
+                    window.location = url;
+                }
+            };
+            
+            // 发送转化事件
+            gtag('event', 'conversion', {
+                'send_to': 'AW-11504440202/first_visit',
+                'event_callback': callback,
+                'event_timeout': 2000
+            });
+            
+            return false;
+        }
 
         // 在页面加载完成后添加事件监听
         document.addEventListener('DOMContentLoaded', function() {
@@ -64,11 +82,6 @@
                         'scroll_depth': Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100),
                         'page_title': 'Top 5 Crypto Credit Cards 2025',
                         'timestamp': new Date().toISOString()
-                    });
-
-                    // 发送转化事件到 Google Ads
-                    gtag('event', 'conversion', {
-                        'send_to': 'AW-11452126254/first_visit'  // 使用默认的 first_visit 事件
                     });
                 });
             });
