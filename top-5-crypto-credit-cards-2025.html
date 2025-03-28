@@ -13,6 +13,38 @@
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
         gtag('config', 'G-48350885');
+
+        // 在页面加载完成后添加事件监听
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有带有 affiliate 链接的按钮
+            const affiliateLinks = document.querySelectorAll('a[href*="redotpay.com"]');
+            
+            // 为每个链接添加点击事件监听
+            affiliateLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // 获取按钮位置信息
+                    const buttonLocation = this.closest('.floating-cta') ? 'floating_button' :
+                                         this.closest('.hero-section') ? 'hero_section' :
+                                         this.closest('.comparison-table') ? 'comparison_table' :
+                                         this.closest('.conclusion') ? 'conclusion' : 'content_body';
+                    
+                    // 获取按钮类型
+                    const buttonType = this.textContent.trim().toLowerCase();
+                    
+                    // 发送事件到 Google Analytics
+                    gtag('event', 'affiliate_link_click', {
+                        'event_category': 'Affiliate',
+                        'event_label': 'RedotPay Card',
+                        'card_name': 'RedotPay Card',
+                        'button_type': buttonType,
+                        'button_location': buttonLocation,
+                        'scroll_depth': Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100),
+                        'page_title': 'Top 5 Crypto Credit Cards 2025',
+                        'timestamp': new Date().toISOString()
+                    });
+                });
+            });
+        });
     </script>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
