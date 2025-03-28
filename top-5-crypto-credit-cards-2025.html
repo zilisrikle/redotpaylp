@@ -698,27 +698,23 @@
     <script>
         // Enhanced event tracking function
         function gtagSendEvent(url, cardName, buttonType) {
-            var callback = function () {
-                if (typeof url === 'string') {
-                    window.location = url;
-                }
-            };
-            
-            // 获取用户的滚动深度百分比
-            var scrollDepth = Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100);
-            
-            gtag('event', 'affiliate_link_click', {
-                'event_callback': callback,
-                'event_timeout': 2000,
-                'event_category': 'Affiliate',
-                'event_label': cardName,
-                'card_name': cardName,
-                'button_type': buttonType,
-                'button_location': getButtonLocation(),
-                'scroll_depth': scrollDepth,
-                'page_title': 'Top 5 Crypto Credit Cards 2025',
-                'timestamp': new Date().toISOString()
-            });
+            // 直接跳转到目标链接，不等待事件回调
+            if (typeof url === 'string') {
+                // 发送事件
+                gtag('event', 'affiliate_link_click', {
+                    'event_category': 'Affiliate',
+                    'event_label': cardName,
+                    'card_name': cardName,
+                    'button_type': buttonType,
+                    'button_location': getButtonLocation(),
+                    'scroll_depth': Math.round((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100),
+                    'page_title': 'Top 5 Crypto Credit Cards 2025',
+                    'timestamp': new Date().toISOString()
+                });
+                
+                // 直接跳转
+                window.location.href = url;
+            }
             return false;
         }
 
