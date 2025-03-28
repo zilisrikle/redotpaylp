@@ -1,15 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://bestcryptocard.xyz</loc>
+        <lastmod>2025-03-28</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://bestcryptocard.xyz/card.html</loc>
+        <lastmod>2025-03-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
     <url>
         <loc>https://bestcryptocard.xyz/top-5-crypto-credit-cards-2025.html</loc>
         <lastmod>2025-03-28</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://bestcryptocard.xyz/</loc>
-        <lastmod>2025-03-28</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
     </url>
 </urlset>

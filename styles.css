@@ -44,13 +44,27 @@ body {
     align-items: center;
 }
 
-.logo {
-    height: 32px;
-    transition: opacity 0.3s ease;
+.logo-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: var(--apple-transition);
 }
 
-.logo:hover {
-    opacity: 0.8;
+.logo-link:hover {
+    opacity: 0.9;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+/* 确保在移动设备上 logo 也能正确显示 */
+@media (max-width: 768px) {
+    .logo {
+        height: 32px;
+    }
 }
 
 .nav-links {
