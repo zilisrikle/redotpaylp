@@ -73,6 +73,11 @@
         <header class="header">
             <nav class="nav-container">
                 <img src="assets/logo-full-light (1).svg" alt="RedotPay" class="logo">
+                <button class="mobile-menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
                 <div class="nav-links">
                     <a href="top-5-crypto-credit-cards-2025.html">Blog</a>
                     <a href="#features">Features</a>
@@ -196,6 +201,37 @@
                     }
                 });
             });
+        });
+
+        // Mobile menu handling
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const body = document.body;
+
+        mobileMenuToggle.addEventListener('click', () => {
+            mobileMenuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.style.overflow = '';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navLinks.classList.contains('active') && 
+                !navLinks.contains(e.target) && 
+                !mobileMenuToggle.contains(e.target)) {
+                mobileMenuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+                body.style.overflow = '';
+            }
         });
     </script>
 </body>
