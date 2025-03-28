@@ -759,6 +759,49 @@ body {
     }
 }
 
+/* 移动端右侧按钮适配 */
+@media (max-width: 768px) {
+    .crisp-client,
+    #crisp-chatbox {
+        right: 10px !important;
+        bottom: 70px !important;
+        z-index: 99 !important;
+    }
+
+    .container {
+        padding: 2rem 1rem 5rem !important;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card-display {
+        margin-right: 60px;
+    }
+
+    .card-image {
+        max-width: calc(100% - 60px);
+    }
+}
+
+@media (max-width: 480px) {
+    .crisp-client,
+    #crisp-chatbox {
+        transform: scale(0.9);
+        transform-origin: bottom right;
+    }
+
+    .card-display {
+        margin-right: 50px;
+    }
+
+    .card-image {
+        max-width: calc(100% - 50px);
+    }
+}
+
 /* Animations */
 @keyframes fadeInUp {
     from {
